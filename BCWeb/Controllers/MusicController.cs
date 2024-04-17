@@ -19,16 +19,30 @@ namespace BCWeb.Controllers
             return new MusicModel[]
             {
                 new MusicModel()
-                {
-                    Id = 1,Usernumber = "bc01",Name ="新造的人" ,},
+                    {Id = 1,Usernumber = "bc01",Name ="新造的人" ,},
+                new MusicModel() 
+                    {Id = 2,Usernumber = "bc02",Name ="My City" ,},
+                new MusicModel()
+                    {Id = 3,Usernumber = "bc03",Name ="Sunflower" ,},
+                new MusicModel()
+                    {Id = 4,Usernumber = "bc04",Name ="Push" ,},
+                new MusicModel()
+                    {Id = 5,Usernumber = "bc05",Name ="Someone You Loved" ,},
             };
         }
 
         // GET: api/Music/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{usernumber}")]
+        public MusicModel Get(string usernumber)
         {
-            return "value";
+            if (MusicModelFakeDB._dictionary.ContainsKey(usernumber))
+            {
+                return MusicModelFakeDB._dictionary[usernumber];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // POST: api/Music
