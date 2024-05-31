@@ -11,10 +11,25 @@ public class LineService : ILineService
     public async Task<List<ISendMessage>> ProcessTextEventMessageAsync(string channelId, string userId, string message)
     {
         var result = null as List<ISendMessage>;
-
+        if (message.Contains("新造的人"))
+        {
+            result = new List<ISendMessage>
+            {
+            new TextMessage("https://youtu.be/VjF_mjBVK6c?si=4LCsQNonAUYsMh-S")
+            };
+            return result;
+        }
+        if (message.Contains("新造的人"))
+        {
+            result = new List<ISendMessage>
+            {
+                new TextMessage("https://youtu.be/VjF_mjBVK6c?si=4LCsQNonAUYsMh-S")
+            };
+            return result;
+        }
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("你是講啥小?")
         };
         return result;
     }
