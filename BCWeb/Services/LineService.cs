@@ -115,10 +115,18 @@ public class LineService : ILineService
             };
             return result;
         }
+        var responses = new List<string>
+        {
+           "你是在講啥小?",
+           "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage("你是講啥小?\n是在靠北喔?"),
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -126,10 +134,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a sticker event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -138,10 +154,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a image event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -149,10 +173,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a image event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -160,10 +192,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a video event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -171,10 +211,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a audio event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 
@@ -182,10 +230,18 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        var responses = new List<string>
+        {
+            "你是在講啥小?",
+            "是在靠北喔?"
+        };
+        Random random = new Random();
+        int index = random.Next(responses.Count); 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a location event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage(responses[index])
         };
+
         return result;
     }
 }
